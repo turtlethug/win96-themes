@@ -1,0 +1,41 @@
+.user-taskbar{
+    height: 48px;
+    max-height: unset;
+    background: none;
+    border: none;
+    bottom: -36px;
+    transition: 0.2s ease-out;
+    transition-delay: 2.5s;
+}
+.user-taskbar:hover{
+    bottom: 0px;
+    transition-delay: 0s;
+}
+
+.taskbar-tasks{
+    justify-content: center;
+    padding: unset;
+}
+.taskbar-task{
+    height: unset;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 0px;
+    flex: unset;
+    background: none
+}
+.taskbar-task_active{
+    background: url(https://cdn.discordapp.com/attachments/952324179334660156/959921804196073552/active.png) !important;
+    background-size: 32px !important;
+    background-repeat: no-repeat !important;
+    background-position-x: 7px !important;
+    background-position-y: 17px !important;
+}
+.taskbar-task-icon{
+    height: 32px;
+    width: 32px;
+    margin: none !important;
+    margin-bottom: 3px;
+    margin-left: 7px;
+
+}
