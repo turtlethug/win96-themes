@@ -1,54 +1,52 @@
 /* 
     Faithful93 : The only 93 theme you will ever need
     By turtle dude
-    revision 1.0 (w96 v2)
+    revision 1.1 (w96 v2)
+    - r1.1 is going to be the last version of Faithful93 for Win96v2. r1.2+ will focus on v3, and will be hosted on github here:
+
     Design and assets are copyright Sys42 and the Windows93 team over at https://windows93.net. No infringement intended!
+
     --Notes
         Obviously, this theme isn't 100% accurate.
         For a 93 accurate explorer, set "showSidebar" to false in C:/system/config/explorer.json. The sidebar is themed if you want to leave it on though.
-        
+        As an extra step, you can enable pixelated image rendering in OS flags for maximum accuracy.
         Any 93 exclusive button or element was cut (e.g explorer home button)
-    --Todo (no particular order, ? = uncertain)
-        -Icon pack (v3)
-        -Terminal skin (?) with custom motd (?)
-        -Get assets hosted somewhere that isn't discord cdn
-        -Goofy ah animatons (?)
-        -93 accurate cursor events (?)
-        -Boot Screen (????)
-    --Changelog r1.0
-        -Themed selection highlights
-        -Tons of size and positioning adjustments
-        -Organized CSS
-        -Fixed maximized windows
-        -Optional 96 styled start menu
-        -Explorer sidebar
-        -3 new messagebox icons
-        -Other fun little snippets
-    --Changelog r0.6
-        -Fixed titlebar letter spacing
-        -Fixed taskbar notification area
-        -Rewrote "readme"
-    --Changelog r0.5
-        -Initial release
+        
+    --Changelog r1.1
+        -Tons of size and postition adjustments, no more chonky windows
+        -Tons of border and box shadow fixes   
+        -Color adjustments
+        -Even better maximized windows
 */
-
-/* windows 93 default wallpaper, delete to remove and use your own */
+/* windows 93 default wallpaper, comment out to remove and use your own */
 .user-desktop{
     background-image: linear-gradient(135deg,#f0f,#0ff) !important;}
 
 /* General */
 .window-dlg:not(.ui-sortable-helper){
-    border-left: 1px solid #c0c0c0;
-    border-top: 1px solid #c0c0c0;
-    border-right: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    padding: 3px;
+    border-left: 1px solid silver;
+    border-top: 1px solid silver;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: silver;
     box-shadow: rgb(0 0 0) 1px 0px, rgb(0 0 0) 0px 1px, rgb(0 0 0) 1px 1px, rgb(255 255 255) 1px 1px inset, rgb(255 0 255 / 50%) 0px 0px 150px 1px;
     /*pink window glow--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--->--^^^ delete to remove */}
 .window-dlg.maximized{
-    margin-left: -4px;
-    margin-top: -4px;}
-
+    height: calc(100vh - 34px)!important;
+    width: calc(100vw - 3px)!important;
+    border-bottom-color: silver;
+    box-shadow: rgb(0 0 0) 1px 0px, grey 0px 2px, rgb(0 0 0) 1px 1px, rgb(255 255 255) 1px 1px inset, rgb(255 0 255 / 50%) 0px 0px 150px 1px;}
+.w96-footer{
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    box-shadow: 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
+    height: 13px;
+    width: calc(100% - 9px);
+    margin-right: 4px;
+    margin-bottom: 1px;
+}
 .w96_sm_item:hover,
 .w96_sm_item.selected,
 .shell-icon.selected .icon-text,
@@ -58,7 +56,8 @@
 .wcontext-menu.mbar>.item:hover,
 .w96-menubar>.root-item.selected,
 .w96-menubar>.root-item:hover{
-    background-color: #0090e4;}
+    background-color: #0090e4;
+    border-color: black;}
 ::selection {
     color: black;
     background: #c3ff00;}
@@ -68,6 +67,8 @@
     font-family: 'nouveaux';
     font-size: 8px;
     padding: 2px;
+    margin: 1px;
+    margin-right: 0px;
     background: linear-gradient(to right,#f0f,#0ff);}
 .titlebar-title-disabled{
     color: white;
@@ -108,10 +109,11 @@
 /* Explorer */
 .wexplorer-app>.nav-bar>.nav{
     font-family: 'nouveaux';
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
     border: none;
     box-shadow: none;
+    border-bottom: 1px solid #dfdfdf !important;
     height: 21px;}
 .wexplorer-app>.nav-bar>.up{
     background-repeat: no-repeat;
@@ -119,17 +121,29 @@
 .wexplorer-app>.nav-bar>.go {
     background-image: url(https://cdn.discordapp.com/attachments/952324179334660156/961426181901652008/expgo.png);
     background-repeat: no-repeat;
-    width: 29px;
-    background-position-y: 6px;
-    background-position-x: 7px;}
+    width: 26px !important;
+    background-position-y: 6px !important;
+    background-position-x: 6px !important;}
 .wexplorer-app>.nav-bar>.w96-button{
     box-shadow: 1px 0 grey, 0 1px grey, 1px 1px grey;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
-    cursor: url(../cursors/hand.cur) 6 0, auto !important;}
+    padding: 0px;
+    background-position: 6px 8px;
+    height: 21px;
+    width: 18px;}
+*:not(.prompt) > input[type="text"], *:not(.prompt) > input[type="number"], *:not(.prompt) > textarea{
+    box-shadow: none !important;
+    border-left: none !important;}
+
 
 .exp-file-view{
-    box-shadow: 1px 0 #fff, 0 1px #fff, 1px 1px #fff;}
+    box-shadow: 1px 0 #fff, 0 1px #fff, 1px 1px #fff;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    width: calc(100% - 1px) !important;}
 .exp-file-view .icon-text{
     text-shadow: none !important;}
 
@@ -141,15 +155,14 @@
 
 /* Misc Window Components */
 .w96-menubar{
-    max-height: 19px;}
+    max-height: 19px;
+    margin-bottom: -1px;
+    margin-left: 1px;}
 .w96-menubar>.root-item{
     padding-top: unset;}
 
 .wcontext-menu{
     box-shadow: inset -1px -1px 0px #808080;}
-
-*:not(.prompt) > input[type="text"], *:not(.prompt) > input[type="number"], *:not(.prompt) > textarea{
-    box-shadow: none !important;}
 
 .shell-icon .icon-text{
     font-family: 'nouveaux';
@@ -236,8 +249,8 @@
     margin-top: 5px
 }
 
-/* 93 Styled Comfortable Start Menu (96 shape) */
-/*.w96_sm_logo .container{
+/* 93 Styled Comfortable Start Menu (96 shape) 
+.w96_sm_logo .container{
     background: linear-gradient(to top,#f0f,#0ff);}
 .w96_sm_logo .container .text::after{
     content: 'Windows 93';
