@@ -1,6 +1,6 @@
 # Faithful93
 ### the only 93 theme you will ever need.
-![Faithful93 Preview](https://github.com/turtlethug/win96-themes/blob/main/Faithful93/assets/preview.png)
+![Faithful93 Preview](https://github.com/turtlethug/win96-themes/v2/themes/Faithful93/assets/preview.png)
 
 ### Preamble
 Faithful93 was built for Windows 96 v2. v3 support will come once v3 itself comes.
