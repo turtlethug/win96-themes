@@ -1,6 +1,6 @@
 # Faithful93
 ### the only 93 theme you will ever need.
-![Faithful93 Preview](https://github.com/turtlethug/win96-themes/v2/themes/Faithful93/assets/preview.png)
+![Faithful93 Preview](https://github.com/turtlethug/win96-themes/tree/main/v2/themes/Faithful93/assets/preview.png)
 
 ### Preamble
 Faithful93 was built for Windows 96 v2. v3 support will come once v3 itself comes.
@@ -16,7 +16,7 @@ For a 93 accurate explorer, set "showSidebar" to false in C:/system/config/explo
 
 Because the default start menu is utter trash, I've included an alternate start menu that looks like the Windows 96 one. Just comment out the entirety of the default menu and uncomment the "comfortable" one.
 
-![Faithful93 Alternate Start Menu](https://github.com/turtlethug/win96-themes/blob/main/Faithful93/assets/altstartm-preview.png)
+![Faithful93 Alternate Start Menu](https://github.com/turtlethug/win96-themes/tree/main/v2/themes/Faithful93/assets/altstartm-preview.png)
 
 ### Credits
 Sys42 and the Windows93 team - assets, design, inspiration, all of the above.
